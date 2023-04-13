@@ -3,6 +3,8 @@ import { Menuitem } from './Menuitem'
 import {AiFillHome} from "react-icons/ai";
 import {BsInfoCircleFill} from 'react-icons/bs';
 import Link from 'next/link';
+import { DarkModeSwitch } from './DarkModeSwitch';
+
 
 export const Header = () => {
   return (
@@ -11,7 +13,8 @@ export const Header = () => {
             <Menuitem title='Home' address="/" Icon={AiFillHome} />
             <Menuitem title='About' address="/about" Icon={BsInfoCircleFill} />
         </div>
-        <div>
+        <div className='flex space-x-5 items-center'>
+            <DarkModeSwitch/>
             <Link href="/">
                 <h2 className='text-2xl '>
                     <span className='font-bold bg-amber-500 py-2 px-2 rounded-lg mr-1'>IMDb</span>
